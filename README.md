@@ -90,6 +90,8 @@ docker-compose down
 - **backend/predict.py**: This script contains the Flask app that handles image classification using the pre-trained ResNet50 model.
 - **frontend/app.py**: The frontend Flask app for managing the image upload interface and sending the image to the backend for classification.
 - **docker-compose.yml**: This file defines the Docker services (frontend and backend), the build process, and the shared Docker network.
+- **backend/Dockerfile**: This Dockerfile defines the environment for the backend service, installing necessary dependencies and setting up the Flask application.
+- **frontend/Dockerfile**: This Dockerfile defines the environment for the frontend service, installing required libraries and preparing the Flask app.
 - **requirements.txt**: Defines the dependencies for both the frontend and backend environments.
 - **upload.html**: The frontend HTML form for image uploads.
 - **result.html**: Displays the classification results (cat or dog) and the confidence score of the prediction.
