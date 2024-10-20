@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "5001:5001"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+
+#if youv dont want to use docker-compose, you can create a docker network "app-network":
+#docker network create app-network
+
+#then run the backend and the frontend contatiner like so:
+#docker run -d --name backend --network app-network backend
+#docker run -d -p 5000:5000 --name frontend --network app-network frontend
+
+#you should build the images if you haven't yet:
+#docker build -t backend ./backend
+#docker build -t frontend ./frontend
+
+
