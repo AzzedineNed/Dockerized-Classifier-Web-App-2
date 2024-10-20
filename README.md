@@ -6,22 +6,36 @@ This project is a continuation of the [Dockerized Classifier Web App](https://gi
 
 
 ├── backend
-│   ├── static                    # Static files (e.g., images, styles)
-│   ├── Dockerfile                # Dockerfile for backend service
-│   ├── predict.py                # Backend Flask app script for image classification
-│   ├── requirements.txt          # Backend Python dependencies
-├── frontend
-│   ├── static
-│   │   └── uploads               # Uploaded images are stored here
-│   ├── templates
-│   │   ├── result.html           # Displays classification results
-│   │   └── upload.html           # Upload form for images
-│   ├── app.py                    # Frontend Flask app script
-│   ├── Dockerfile                # Dockerfile for frontend service
-│   ├── requirements.txt          # Frontend Python dependencies
-├── docker-compose.yml            # Docker Compose configuration for services
-└── README.md                     # Project documentation
 
+│   ├── static                    # Static files (e.g., images, styles)
+
+│   ├── Dockerfile                # Dockerfile for backend service
+
+│   ├── predict.py                # Backend Flask app script for image classification
+
+│   ├── requirements.txt          # Backend Python dependencies
+
+├── frontend
+
+│   ├── static
+
+│   │   └── uploads               # Uploaded images are stored here
+
+│   ├── templates
+
+│   │   ├── result.html           # Displays classification results
+
+│   │   └── upload.html           # Upload form for images
+
+│   ├── app.py                    # Frontend Flask app script
+
+│   ├── Dockerfile                # Dockerfile for frontend service
+
+│   ├── requirements.txt          # Frontend Python dependencies
+
+├── docker-compose.yml            # Docker Compose configuration for services
+
+└── README.md                     # Project documentation
 
 ## Features
 
