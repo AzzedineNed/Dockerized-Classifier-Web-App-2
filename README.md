@@ -4,38 +4,37 @@ This project is a continuation of the [Dockerized Classifier Web App](https://gi
 
 ## Project Structure
 
-
 ├── backend
 
-│   ├── static                    # Static files (e.g., images, styles)
+│ ├── static # Static files (e.g., images, styles)
 
-│   ├── Dockerfile                # Dockerfile for backend service
+│ ├── Dockerfile # Dockerfile for backend service
 
-│   ├── predict.py                # Backend Flask app script for image classification
+│ ├── predict.py # Backend Flask app script for image classification
 
-│   ├── requirements.txt          # Backend Python dependencies
+│ ├── requirements.txt # Backend Python dependencies
 
 ├── frontend
 
-│   ├── static
+│ ├── static
 
-│   │   └── uploads               # Uploaded images are stored here
+│ │ └── uploads # Uploaded images are stored here
 
-│   ├── templates
+│ ├── templates
 
-│   │   ├── result.html           # Displays classification results
+│ │ ├── result.html # Displays classification results
 
-│   │   └── upload.html           # Upload form for images
+│ │ └── upload.html # Upload form for images
 
-│   ├── app.py                    # Frontend Flask app script
+│ ├── app.py # Frontend Flask app script
 
-│   ├── Dockerfile                # Dockerfile for frontend service
+│ ├── Dockerfile # Dockerfile for frontend service
 
-│   ├── requirements.txt          # Frontend Python dependencies
+│ ├── requirements.txt # Frontend Python dependencies
 
-├── docker-compose.yml            # Docker Compose configuration for services
+├── docker-compose.yml # Docker Compose configuration for services
 
-└── README.md                     # Project documentation
+└── README.md # Project documentation
 
 ## Features
 
@@ -47,6 +46,7 @@ This project is a continuation of the [Dockerized Classifier Web App](https://gi
 ## Requirements
 
 - **Docker**: Ensure Docker is installed on your system.
+- **Docker Compose**: To orchestrate the frontend and backend services.
 
 ## How to Run the Project
 
@@ -57,14 +57,19 @@ git clone https://github.com/your-username/dockerized-classifier-web-app-2.git
 cd dockerized-classifier-web-app-2
 
 ```
+
 ### CD to the repo
+
 ```bash
 cd dockerized-classifier-web-app-2
 ```
+
 ### Step 2: Build and Run using Docker Compose
+
 ```bash
 docker-compose up --build
 ```
+
 This will build both the frontend and backend Docker images and start the services. Docker Compose will automatically create a network so that the services can communicate with each other.
 
 ### Step 3: Access the Application
@@ -81,6 +86,7 @@ docker-compose down
 ```
 
 ### Key Files
+
 - **backend/predict.py**: This script contains the Flask app that handles image classification using the pre-trained ResNet50 model.
 - **frontend/app.py**: The frontend Flask app for managing the image upload interface and sending the image to the backend for classification.
 - **docker-compose.yml**: This file defines the Docker services (frontend and backend), the build process, and the shared Docker network.
@@ -89,14 +95,17 @@ docker-compose down
 - **result.html**: Displays the classification results (cat or dog) and the confidence score of the prediction.
 
 ### How the System Works
+
 - **Frontend (Flask)**: The user interacts with the frontend by uploading an image through the interface.
 - **Backend (Flask)**: The frontend sends the uploaded image to the backend, which uses the ResNet50 model to classify the image.
 - **Prediction and Result Display**: The backend returns the classification result to the frontend, which displays the prediction along with the confidence score.
 
 ### Networking
+
 Docker Compose creates an internal network that allows the frontend and backend services to communicate with each other. This is done without the need for manual network creation, and Docker handles the connections automatically when the services are defined in `docker-compose.yml`.
 
 ### Running the Application
+
 To start the application, use the following command in your terminal:
 
 ```bash
@@ -104,4 +113,5 @@ docker-compose up
 ```
 
 ### Conclusion
+
 This project showcases how to containerize a Flask web application and manage multiple services using Docker Compose. The Dockerized approach simplifies deployment and scaling, while the app demonstrates a basic image classification pipeline using ResNet50.
