@@ -19,15 +19,13 @@ This project is a continuation of the [Dockerized Classifier Web App](https://gi
 ### Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/AzzedineNed/dockerized-classifier-web-app-2.git
-cd dockerized-classifier-web-app-2
-
+git clone https://github.com/AzzedineNed/dDockerized-Classifier-Web-App-2.git
 ```
 
 ### CD to the repo
 
 ```bash
-cd dockerized-classifier-web-app-2
+cd Dockerized-Classifier-Web-App-2
 ```
 
 ### Step 2: Build and Run using Docker Compose
