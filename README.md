@@ -2,40 +2,6 @@
 
 This project is a continuation of the [Dockerized Classifier Web App](https://github.com/AzzedineNed/Dockerized-Classifier-Web-App), extending the functionality by incorporating Docker Compose for orchestrating multiple services (frontend and backend). The web app allows users to upload images of cats or dogs, which are classified using a pre-trained ResNet50 model.
 
-## Project Structure
-
-├── backend
-
-│ ├── static # Static files (e.g., images, styles)
-
-│ ├── Dockerfile # Dockerfile for backend service
-
-│ ├── predict.py # Backend Flask app script for image classification
-
-│ ├── requirements.txt # Backend Python dependencies
-
-├── frontend
-
-│ ├── static
-
-│ │ └── uploads # Uploaded images are stored here
-
-│ ├── templates
-
-│ │ ├── result.html # Displays classification results
-
-│ │ └── upload.html # Upload form for images
-
-│ ├── app.py # Frontend Flask app script
-
-│ ├── Dockerfile # Dockerfile for frontend service
-
-│ ├── requirements.txt # Frontend Python dependencies
-
-├── docker-compose.yml # Docker Compose configuration for services
-
-└── README.md # Project documentation
-
 ## Features
 
 - **Image Upload via Frontend**: Users can upload an image through the frontend web interface.
@@ -53,7 +19,7 @@ This project is a continuation of the [Dockerized Classifier Web App](https://gi
 ### Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/your-username/dockerized-classifier-web-app-2.git
+git clone https://github.com/AzzedineNed/dockerized-classifier-web-app-2.git
 cd dockerized-classifier-web-app-2
 
 ```
